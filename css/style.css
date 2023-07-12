@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato";
+  color: #bbd5ff;
+}
+
+body {
+  padding: 0 8vw;
+  background-color: #19191c;
+  display: block;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+p {
+  font-size: 22px;
+  color: #bbd5ff;
+}
+
+#icon {
+  position: fixed;
+  top: 2vh;
+  left: 2vh;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+#landing {
+  height: 100vh;
+  padding-top: 15vh;
+}
+#landing .title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navbar {
+  margin-bottom: 10vh;
+  display: none;
+}
+@media screen and (min-width: 720px) {
+  .navbar {
+    display: block;
+  }
+}
+
+.selectable {
+  font-size: 28px;
+  font-weight: 500;
+  position: relative;
+}
+.selectable .highlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #4CAB4D;
+  transition: width 0.5s;
+  z-index: -1;
+}
+
+.selectable:hover .highlight {
+  width: 100%;
+}
+
+#about-me h2 {
+  font-size: 28px;
+}
+
+#projects {
+  margin-top: 20vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#projects h1 {
+  margin-bottom: 32px;
+}
+
+.project img {
+  max-width: 80vw;
+  border-radius: 16px;
+}
+
+/*# sourceMappingURL=style.css.map */

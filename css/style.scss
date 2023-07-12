@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+$highlight: #4CAB4D;
+$bg-color: #19191c;
+$text-color: #bbd5ff;
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato";
+    color: $text-color;
+}
+
+body {
+    padding: 0 8vw;
+    background-color: $bg-color;
+    display: block;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+p {
+    font-size: 22px;
+    color: $text-color;
+}
+
+#icon {
+    position: fixed;
+    top: 2vh;
+    left: 2vh;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+#landing {
+    height: 100vh;
+    padding-top: 15vh;
+
+    .title {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+.navbar {
+    margin-bottom: 10vh;
+    display: none;
+    
+    @media screen and (min-width: 720px) {
+        display: block;
+    }
+}
+
+.selectable {
+    font-size: 28px;
+    font-weight: 500;
+    position: relative;
+
+    .highlight{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: $highlight;
+        transition: width 0.5s;
+        z-index: -1;
+    }
+}
+
+.selectable:hover .highlight{
+    width: 100%;
+}
+
+#about-me {
+    h2 {
+        font-size: 28px;
+    }
+}
+
+#projects{
+    margin-top: 20vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    h1 {
+        margin-bottom: 32px;
+    }
+}
+
+.project {
+    img {
+        max-width: 80vw;
+        border-radius: 16px;
+    }
+}
