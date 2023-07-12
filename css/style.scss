@@ -11,6 +11,7 @@ $text-color: #bbd5ff;
     box-sizing: border-box;
     font-family: "Lato";
     color: $text-color;
+    line-height: 1.5;
 }
 
 body {
@@ -40,30 +41,48 @@ p {
     font-weight: 700;
 }
 
+/* Swup Transition */
+.transition-fade {
+    position: relative;
+    transition: 0.5s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    left: 0;
+    opacity: 1;
+}
+
+html.is-animating .transition-fade {
+    left: -20%;
+    opacity: 0;
+}
+
 #landing {
     height: 100vh;
-    padding-top: 15vh;
+    padding-top: 6vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
 
     .title {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        // display: flex;
+        // flex-wrap: wrap;
+        // justify-content: center;
     }
 }
 
 
 .navbar {
-    margin-bottom: 10vh;
-    display: none;
     
-    @media screen and (min-width: 720px) {
-        display: block;
+    @media screen and (min-width: 1000px) {
+        
     }
 }
 
 .selectable {
-    font-size: 28px;
-    font-weight: 500;
+    display: block;
+    width: fit-content;
+    margin-bottom: 32px;
+    font-size: 32px;
+    font-weight: 600;
     position: relative;
 
     .highlight{
@@ -78,11 +97,18 @@ p {
     }
 }
 
-.selectable:hover .highlight{
-    width: 100%;
+@media screen and (min-width: 1000px) {
+    .selectable:hover .highlight{
+        width: 100%;
+    }
 }
 
 #about-me {
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
     h2 {
         font-size: 28px;
     }
@@ -100,8 +126,20 @@ p {
 }
 
 .project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
     img {
         max-width: 80vw;
         border-radius: 16px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    p {
+        display: none;
     }
 }
